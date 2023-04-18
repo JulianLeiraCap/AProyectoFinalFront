@@ -1,0 +1,28 @@
+<div class="col-md-8 mx-auto">
+    <h2> User Details</h2>
+    
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th class="hidden">Id</th>
+        <th>Name</th>
+        <th>LastName</th>
+        <th>Year</th>
+        <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let user of users">
+        <td class="hidden">{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.lastname}}</td>
+        <td>{{user.year}}</td>
+        <td><button class="btn btn-danger m-1" (click)="deleteUser(user)"> Delete User</button> <br>
+          <button class="btn btn-dark m-1" [routerLink]="['/modify/', user.id]"> Modify User</button>   
+        </td>
+           
+      </tr>
+      </tbody>
+    </table>
+    </div>
+

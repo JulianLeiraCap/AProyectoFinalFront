@@ -1,0 +1,21 @@
+<div class="col-md-4 mx-auto">
+    <h2 class="text-center" id="titulo">{{user.id ? 'Modify' : 'Add'}} User</h2>
+  <form>
+    <div class="row justify-content-center">
+    <div class="form-group">
+      <label for="name">First Name:</label>
+      <input [(ngModel)]="user.name" placeholder="Name" name="name" class="form-control" id="name">
+    </div>
+  
+    <div class="form-group">
+      <label for="lastname">Last Name:</label>
+      <input [(ngModel)]="user.lastname" placeholder="Last name" name="lastname" class="form-control" id="lastname">
+    </div>
+    <div class="form-group">
+      <label for="year">Year:</label>
+      <input type="year" [(ngModel)]="user.year" placeholder="year" name="year" class="form-control" id="year">
+    </div> 
+    <button class="btn btn-success col-md-3  my-4 mx-auto" (click)="ModifyUser(user)">{{user.id ? 'Modify' : 'Add'}}</button>
+  </div>
+  </form>
+  </div>
